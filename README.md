@@ -16,6 +16,12 @@ HTTP listener, no credentials, no exploit payload, and must not be deployed.
 The precise GHSA IDs, CVE aliases, and vulnerability types are in
 expected-sca-findings.json.
 
+## Supply-chain malware fixture
+
+The malware-indicators directory is a separate, quarantined lockfile-only
+fixture for validating malware intelligence and Socket supply-chain alerts.
+Never install or run its dependencies. See malware-indicators/README.md.
+
 ## SCA QA instructions
 
 1. Scan the repository or upload it as an SCA ZIP fixture.
