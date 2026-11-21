@@ -1,0 +1,14 @@
+{
+  "name": "sca-known-vulnerable-node-fixture",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Non-production SCA QA fixture. It intentionally pins known vulnerable dependency versions for scanner validation.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "lodash": "4.17.20",
+    "minimist": "1.2.5"
+  }
+}

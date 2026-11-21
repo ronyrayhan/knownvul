@@ -1,0 +1,45 @@
+{
+  "fixture": "sca-known-vulnerable-node-fixture",
+  "baseline_source": "OSV npm version query",
+  "baseline_checked_at": "2026-11-21",
+  "expected_direct_advisory_count": 5,
+  "packages": [
+    {
+      "name": "lodash",
+      "version": "4.17.20",
+      "expected_advisories": [
+        {
+          "id": "GHSA-29mw-wpgm-hmr9",
+          "aliases": ["CVE-2020-28500"],
+          "type": "Regular-expression denial of service"
+        },
+        {
+          "id": "GHSA-35jh-r3h4-6jhm",
+          "aliases": ["CVE-2021-23337"],
+          "type": "Command injection through template processing"
+        },
+        {
+          "id": "GHSA-r5fr-rjxr-66jc",
+          "aliases": ["CVE-2026-4800"],
+          "type": "Code injection through template imports"
+        },
+        {
+          "id": "GHSA-xxjr-mmjv-4gpg",
+          "aliases": ["CVE-2025-13465"],
+          "type": "Prototype pollution"
+        }
+      ]
+    },
+    {
+      "name": "minimist",
+      "version": "1.2.5",
+      "expected_advisories": [
+        {
+          "id": "GHSA-xvch-5gv4-984h",
+          "aliases": ["CVE-2021-44906"],
+          "type": "Prototype pollution"
+        }
+      ]
+    }
+  ]
+}
