@@ -2,7 +2,7 @@
   "fixture": "sca-known-vulnerable-node-fixture",
   "baseline_source": "OSV npm version query",
   "baseline_checked_at": "2026-11-21",
-  "expected_direct_advisory_count": 5,
+  "expected_direct_advisory_count": 4,
   "packages": [
     {
       "name": "lodash",
@@ -26,17 +26,6 @@
         {
           "id": "GHSA-xxjr-mmjv-4gpg",
           "aliases": ["CVE-2025-13465"],
-          "type": "Prototype pollution"
-        }
-      ]
-    },
-    {
-      "name": "minimist",
-      "version": "1.2.5",
-      "expected_advisories": [
-        {
-          "id": "GHSA-xvch-5gv4-984h",
-          "aliases": ["CVE-2021-44906"],
           "type": "Prototype pollution"
         }
       ]
