@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-25T14:13:42.623Z",
-  "findingCount": 14,
+  "generatedAt": "2026-11-25T14:15:14.520Z",
+  "findingCount": 15,
   "findings": [
     {
       "category": "hardcoded-secret",
@@ -113,6 +113,14 @@
       "file": "src/server.js",
       "line": 33,
       "id": "SAST-0014"
+    },
+    {
+      "category": "validation-rename-code-injection",
+      "cwe": "CWE-95",
+      "description": "Temporary test finding for rename identity.",
+      "file": "src/validation-rename-source.js",
+      "line": 5,
+      "id": "SAST-0015"
     }
   ]
 }
