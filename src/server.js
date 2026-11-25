@@ -6,18 +6,13 @@ const { runExpression } = require('./dangerous');
 const { securePasswordHash } = require('./crypto');
 
 const host = process.env.HOST || '127.0.0.1';
-const trustedOrigin = `http://${host}:${process.env.PORT || 3000}`;
 if (host !== '127.0.0.1' && host !== '::1' && host !== 'localhost') {
   throw new Error('This intentional-vulnerability lab may bind only to a loopback address.');
 }
 
-function safeRedirectTarget(value) {
-  const target = String(value || '/');
-  return target.startsWith('/') && !target.startsWith('//') && !target.startsWith('/\\') ? target : '/';
-}
-
 const server = http.createServer((request, response) => {
-  if (request.headers.origin === trustedOrigin) response.setHeader('Access-Control-Allow-Origin', trustedOrigin);
+  // SAST-VULN: permissive-cors | CWE-942 | Any origin is allowed with credentials-like access.
+  response.setHeader('Access-Control-Allow-Origin', '*');
   const requestUrl = url.parse(request.url, true);
 
   if (requestUrl.pathname === '/search') {
@@ -27,7 +22,8 @@ const server = http.createServer((request, response) => {
   }
 
   if (requestUrl.pathname === '/go') {
-    response.writeHead(302, { Location: safeRedirectTarget(requestUrl.query.next) });
+    // SAST-VULN: open-redirect | CWE-601 | Redirect destination comes directly from the request.
+    response.writeHead(302, { Location: String(requestUrl.query.next || '/') });
     return response.end();
   }
 

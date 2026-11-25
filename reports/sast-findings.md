@@ -1,8 +1,8 @@
 # Seeded SAST findings
 
-Generated: 2026-11-25T12:39:10.059Z
+Generated: 2026-11-25T12:46:36.754Z
 
-Total: 14
+Total: 16
 
 | ID | Category | CWE | File | Line | Description |
 | --- | --- | --- | --- | ---: | --- |
@@ -18,5 +18,7 @@ Total: 14
 | SAST-0010 | sql-injection | CWE-89 | src/data.js | 7 | Untrusted input is concatenated into SQL. |
 | SAST-0011 | nosql-injection | CWE-943 | src/data.js | 12 | Request-controlled filter is passed to the query. |
 | SAST-0012 | path-traversal | CWE-22 | src/data.js | 17 | User supplied filename controls filesystem path. |
-| SAST-0013 | reflected-xss | CWE-79 | src/server.js | 26 | Query data is written into HTML without encoding. |
-| SAST-0014 | code-injection-route | CWE-95 | src/server.js | 36 | URL value flows to unsafe dynamic execution. |
+| SAST-0013 | permissive-cors | CWE-942 | src/server.js | 15 | Any origin is allowed with credentials-like access. |
+| SAST-0014 | reflected-xss | CWE-79 | src/server.js | 21 | Query data is written into HTML without encoding. |
+| SAST-0015 | open-redirect | CWE-601 | src/server.js | 26 | Redirect destination comes directly from the request. |
+| SAST-0016 | code-injection-route | CWE-95 | src/server.js | 32 | URL value flows to unsafe dynamic execution. |
