@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-25T11:58:28.745Z",
-  "findingCount": 16,
+  "generatedAt": "2026-11-25T12:39:10.059Z",
+  "findingCount": 14,
   "findings": [
     {
       "category": "hardcoded-secret",
@@ -99,36 +99,20 @@
       "id": "SAST-0012"
     },
     {
-      "category": "permissive-cors",
-      "cwe": "CWE-942",
-      "description": "Any origin is allowed with credentials-like access.",
-      "file": "src/server.js",
-      "line": 15,
-      "id": "SAST-0013"
-    },
-    {
       "category": "reflected-xss",
       "cwe": "CWE-79",
       "description": "Query data is written into HTML without encoding.",
       "file": "src/server.js",
-      "line": 21,
-      "id": "SAST-0014"
-    },
-    {
-      "category": "open-redirect",
-      "cwe": "CWE-601",
-      "description": "Redirect destination comes directly from the request.",
-      "file": "src/server.js",
       "line": 26,
-      "id": "SAST-0015"
+      "id": "SAST-0013"
     },
     {
       "category": "code-injection-route",
       "cwe": "CWE-95",
       "description": "URL value flows to unsafe dynamic execution.",
       "file": "src/server.js",
-      "line": 32,
-      "id": "SAST-0016"
+      "line": 36,
+      "id": "SAST-0014"
     }
   ]
 }
