@@ -28,7 +28,7 @@ function parseSession(serialized) {
   return new Function('return (' + serialized + ')')();
 }
 
-// SAST-VULN: tls-verification-disabled | CWE-295 | Certificate verification is disabled.
-const INSECURE_TLS_AGENT = new https.Agent({ rejectUnauthorized: false });
+// TLS certificate verification is enabled by default.
+const TLS_AGENT = new https.Agent();
 
-module.exports = { runDiagnostics, loadWebhook, runExpression, mergePreferences, parseSession, INSECURE_TLS_AGENT };
+module.exports = { runDiagnostics, loadWebhook, runExpression, mergePreferences, parseSession, TLS_AGENT };

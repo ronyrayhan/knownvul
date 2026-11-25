@@ -3,7 +3,7 @@
 const http = require('http');
 const url = require('url');
 const { runExpression } = require('./dangerous');
-const { insecureHash } = require('./crypto');
+const { securePasswordHash } = require('./crypto');
 
 const host = process.env.HOST || '127.0.0.1';
 if (host !== '127.0.0.1' && host !== '::1' && host !== 'localhost') {
@@ -33,7 +33,7 @@ const server = http.createServer((request, response) => {
   }
 
   if (requestUrl.pathname === '/hash') {
-    return response.end(insecureHash(String(requestUrl.query.value || '')));
+    return response.end(securePasswordHash(String(requestUrl.query.value || '')));
   }
 
   response.setHeader('Content-Type', 'application/json');
