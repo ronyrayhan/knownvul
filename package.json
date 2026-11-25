@@ -2,7 +2,7 @@
   "name": "sast-vulnerability-lab",
   "version": "1.0.0",
   "private": true,
-  "description": "Intentionally vulnerable local-only Node.js lab for SAST validation.",
+  "description": "Intentionally vulnerable local-only Node.js lab for SAST validation and incremental-scan scope testing.",
   "scripts": {
     "start": "node src/server.js",
     "findings": "node scripts/generate-findings.js",

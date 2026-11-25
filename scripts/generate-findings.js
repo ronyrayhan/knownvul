@@ -1,4 +1,5 @@
 'use strict';
+// Validation branch marker: report generator behavior is unchanged.
 
 const fs = require('fs');
 const path = require('path');

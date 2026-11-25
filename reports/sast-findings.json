@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T13:02:30.788Z",
+  "generatedAt": "2026-11-25T14:07:32.653Z",
   "findingCount": 14,
   "findings": [
     {
@@ -7,7 +7,7 @@
       "cwe": "CWE-798",
       "description": "Embedded credential in source.",
       "file": "src/config.js",
-      "line": 4,
+      "line": 5,
       "id": "SAST-0001"
     },
     {
@@ -15,7 +15,7 @@
       "cwe": "CWE-798",
       "description": "Embedded API token in source.",
       "file": "src/config.js",
-      "line": 6,
+      "line": 7,
       "id": "SAST-0002"
     },
     {
@@ -23,7 +23,7 @@
       "cwe": "CWE-330",
       "description": "Math.random is predictable for security tokens.",
       "file": "src/crypto.js",
-      "line": 13,
+      "line": 14,
       "id": "SAST-0003"
     },
     {
@@ -31,7 +31,7 @@
       "cwe": "CWE-327",
       "description": "DES is obsolete and insecure.",
       "file": "src/crypto.js",
-      "line": 17,
+      "line": 18,
       "id": "SAST-0004"
     },
     {
@@ -39,7 +39,7 @@
       "cwe": "CWE-78",
       "description": "Request input is interpolated into a shell command.",
       "file": "src/dangerous.js",
-      "line": 8,
+      "line": 9,
       "id": "SAST-0005"
     },
     {
@@ -47,7 +47,7 @@
       "cwe": "CWE-918",
       "description": "Caller controls an outbound request target.",
       "file": "src/dangerous.js",
-      "line": 13,
+      "line": 14,
       "id": "SAST-0006"
     },
     {
@@ -55,7 +55,7 @@
       "cwe": "CWE-1321",
       "description": "Untrusted keys are copied without filtering.",
       "file": "src/dangerous.js",
-      "line": 24,
+      "line": 25,
       "id": "SAST-0007"
     },
     {
@@ -63,7 +63,7 @@
       "cwe": "CWE-89",
       "description": "Untrusted input is concatenated into SQL.",
       "file": "src/data.js",
-      "line": 7,
+      "line": 8,
       "id": "SAST-0008"
     },
     {
@@ -71,7 +71,7 @@
       "cwe": "CWE-943",
       "description": "Request-controlled filter is passed to the query.",
       "file": "src/data.js",
-      "line": 12,
+      "line": 13,
       "id": "SAST-0009"
     },
     {
@@ -79,7 +79,7 @@
       "cwe": "CWE-22",
       "description": "User supplied filename controls filesystem path.",
       "file": "src/data.js",
-      "line": 17,
+      "line": 18,
       "id": "SAST-0010"
     },
     {
@@ -87,7 +87,7 @@
       "cwe": "CWE-942",
       "description": "Any origin is allowed with credentials-like access.",
       "file": "src/server.js",
-      "line": 15,
+      "line": 16,
       "id": "SAST-0011"
     },
     {
@@ -95,7 +95,7 @@
       "cwe": "CWE-79",
       "description": "Query data is written into HTML without encoding.",
       "file": "src/server.js",
-      "line": 21,
+      "line": 22,
       "id": "SAST-0012"
     },
     {
@@ -103,7 +103,7 @@
       "cwe": "CWE-601",
       "description": "Redirect destination comes directly from the request.",
       "file": "src/server.js",
-      "line": 26,
+      "line": 27,
       "id": "SAST-0013"
     },
     {
@@ -111,7 +111,7 @@
       "cwe": "CWE-95",
       "description": "URL value flows to unsafe dynamic execution.",
       "file": "src/server.js",
-      "line": 32,
+      "line": 33,
       "id": "SAST-0014"
     }
   ]

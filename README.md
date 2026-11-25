@@ -1,5 +1,7 @@
 # SAST Vulnerability Lab
 
+Validation branch marker: used only for incremental scan scope testing.
+
 An intentionally vulnerable, **localhost-only** Node.js application for validating static application security testing rules. It is not designed for deployment or exposure to a network.
 
 ## Coverage
