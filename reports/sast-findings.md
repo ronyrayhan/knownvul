@@ -1,6 +1,6 @@
 # Seeded SAST findings
 
-Generated: 2026-11-25T14:15:14.520Z
+Generated: 2026-11-25T14:17:00.597Z
 
 Total: 15
 
@@ -20,4 +20,4 @@ Total: 15
 | SAST-0012 | reflected-xss | CWE-79 | src/server.js | 22 | Query data is written into HTML without encoding. |
 | SAST-0013 | open-redirect | CWE-601 | src/server.js | 27 | Redirect destination comes directly from the request. |
 | SAST-0014 | code-injection-route | CWE-95 | src/server.js | 33 | URL value flows to unsafe dynamic execution. |
-| SAST-0015 | validation-rename-code-injection | CWE-95 | src/validation-rename-source.js | 5 | Temporary test finding for rename identity. |
+| SAST-0015 | validation-rename-code-injection | CWE-95 | src/validation-rename-destination.js | 5 | Temporary test finding for rename identity. |

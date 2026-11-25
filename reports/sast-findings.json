@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T14:15:14.520Z",
+  "generatedAt": "2026-11-25T14:17:00.597Z",
   "findingCount": 15,
   "findings": [
     {
@@ -118,7 +118,7 @@
       "category": "validation-rename-code-injection",
       "cwe": "CWE-95",
       "description": "Temporary test finding for rename identity.",
-      "file": "src/validation-rename-source.js",
+      "file": "src/validation-rename-destination.js",
       "line": 5,
       "id": "SAST-0015"
     }
