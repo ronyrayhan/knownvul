@@ -1,8 +1,8 @@
 # Seeded SAST findings
 
-Generated: 2026-11-25T14:12:07.954Z
+Generated: 2026-11-25T14:13:42.623Z
 
-Total: 15
+Total: 14
 
 | ID | Category | CWE | File | Line | Description |
 | --- | --- | --- | --- | ---: | --- |
@@ -20,4 +20,3 @@ Total: 15
 | SAST-0012 | reflected-xss | CWE-79 | src/server.js | 22 | Query data is written into HTML without encoding. |
 | SAST-0013 | open-redirect | CWE-601 | src/server.js | 27 | Redirect destination comes directly from the request. |
 | SAST-0014 | code-injection-route | CWE-95 | src/server.js | 33 | URL value flows to unsafe dynamic execution. |
-| SAST-0015 | validation-delete-code-injection | CWE-95 | src/validation-delete-target.js | 5 | Temporary test finding for deletion handling. |
