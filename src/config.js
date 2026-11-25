@@ -1,4 +1,5 @@
 'use strict';
+// Large validation change marker.
 
 // SAST-VULN: hardcoded-secret | CWE-798 | Embedded credential in source.
 const DATABASE_PASSWORD = 'sast-demo-password-DO-NOT-USE';
