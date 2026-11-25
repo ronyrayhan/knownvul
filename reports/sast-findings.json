@@ -1,0 +1,150 @@
+{
+  "generatedAt": "2026-11-25T11:49:11.410Z",
+  "findingCount": 18,
+  "findings": [
+    {
+      "category": "hardcoded-secret",
+      "cwe": "CWE-798",
+      "description": "Embedded credential in source.",
+      "file": "src/config.js",
+      "line": 4,
+      "id": "SAST-0001"
+    },
+    {
+      "category": "hardcoded-secret",
+      "cwe": "CWE-798",
+      "description": "Embedded API token in source.",
+      "file": "src/config.js",
+      "line": 6,
+      "id": "SAST-0002"
+    },
+    {
+      "category": "weak-hash",
+      "cwe": "CWE-327",
+      "description": "MD5 is unsuitable for passwords.",
+      "file": "src/crypto.js",
+      "line": 7,
+      "id": "SAST-0003"
+    },
+    {
+      "category": "insecure-randomness",
+      "cwe": "CWE-330",
+      "description": "Math.random is predictable for security tokens.",
+      "file": "src/crypto.js",
+      "line": 12,
+      "id": "SAST-0004"
+    },
+    {
+      "category": "weak-crypto",
+      "cwe": "CWE-327",
+      "description": "DES is obsolete and insecure.",
+      "file": "src/crypto.js",
+      "line": 16,
+      "id": "SAST-0005"
+    },
+    {
+      "category": "command-injection",
+      "cwe": "CWE-78",
+      "description": "Request input is interpolated into a shell command.",
+      "file": "src/dangerous.js",
+      "line": 8,
+      "id": "SAST-0006"
+    },
+    {
+      "category": "ssrf",
+      "cwe": "CWE-918",
+      "description": "Caller controls an outbound request target.",
+      "file": "src/dangerous.js",
+      "line": 13,
+      "id": "SAST-0007"
+    },
+    {
+      "category": "code-injection",
+      "cwe": "CWE-95",
+      "description": "eval executes caller-controlled JavaScript.",
+      "file": "src/dangerous.js",
+      "line": 18,
+      "id": "SAST-0008"
+    },
+    {
+      "category": "prototype-pollution",
+      "cwe": "CWE-1321",
+      "description": "Untrusted keys are copied without filtering.",
+      "file": "src/dangerous.js",
+      "line": 23,
+      "id": "SAST-0009"
+    },
+    {
+      "category": "insecure-deserialization",
+      "cwe": "CWE-502",
+      "description": "Function constructor executes serialized content.",
+      "file": "src/dangerous.js",
+      "line": 28,
+      "id": "SAST-0010"
+    },
+    {
+      "category": "tls-verification-disabled",
+      "cwe": "CWE-295",
+      "description": "Certificate verification is disabled.",
+      "file": "src/dangerous.js",
+      "line": 32,
+      "id": "SAST-0011"
+    },
+    {
+      "category": "sql-injection",
+      "cwe": "CWE-89",
+      "description": "Untrusted input is concatenated into SQL.",
+      "file": "src/data.js",
+      "line": 7,
+      "id": "SAST-0012"
+    },
+    {
+      "category": "nosql-injection",
+      "cwe": "CWE-943",
+      "description": "Request-controlled filter is passed to the query.",
+      "file": "src/data.js",
+      "line": 12,
+      "id": "SAST-0013"
+    },
+    {
+      "category": "path-traversal",
+      "cwe": "CWE-22",
+      "description": "User supplied filename controls filesystem path.",
+      "file": "src/data.js",
+      "line": 17,
+      "id": "SAST-0014"
+    },
+    {
+      "category": "permissive-cors",
+      "cwe": "CWE-942",
+      "description": "Any origin is allowed with credentials-like access.",
+      "file": "src/server.js",
+      "line": 15,
+      "id": "SAST-0015"
+    },
+    {
+      "category": "reflected-xss",
+      "cwe": "CWE-79",
+      "description": "Query data is written into HTML without encoding.",
+      "file": "src/server.js",
+      "line": 21,
+      "id": "SAST-0016"
+    },
+    {
+      "category": "open-redirect",
+      "cwe": "CWE-601",
+      "description": "Redirect destination comes directly from the request.",
+      "file": "src/server.js",
+      "line": 26,
+      "id": "SAST-0017"
+    },
+    {
+      "category": "code-injection-route",
+      "cwe": "CWE-95",
+      "description": "URL value flows to unsafe dynamic execution.",
+      "file": "src/server.js",
+      "line": 32,
+      "id": "SAST-0018"
+    }
+  ]
+}
