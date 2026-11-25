@@ -14,8 +14,9 @@ function loadWebhook(url, callback) {
 }
 
 function runExpression(expression) {
-  // SAST-VULN: code-injection | CWE-95 | eval executes caller-controlled JavaScript.
-  return eval(expression); // eslint-disable-line no-eval
+  const result = Number(expression);
+  if (!Number.isFinite(result)) throw new TypeError('A finite number is required.');
+  return result;
 }
 
 function mergePreferences(target, incoming) {
@@ -24,8 +25,7 @@ function mergePreferences(target, incoming) {
 }
 
 function parseSession(serialized) {
-  // SAST-VULN: insecure-deserialization | CWE-502 | Function constructor executes serialized content.
-  return new Function('return (' + serialized + ')')();
+  return JSON.parse(serialized);
 }
 
 // TLS certificate verification is enabled by default.

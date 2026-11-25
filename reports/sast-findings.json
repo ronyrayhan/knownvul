@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-25T12:46:36.754Z",
-  "findingCount": 16,
+  "generatedAt": "2026-11-25T13:02:30.788Z",
+  "findingCount": 14,
   "findings": [
     {
       "category": "hardcoded-secret",
@@ -51,28 +51,12 @@
       "id": "SAST-0006"
     },
     {
-      "category": "code-injection",
-      "cwe": "CWE-95",
-      "description": "eval executes caller-controlled JavaScript.",
-      "file": "src/dangerous.js",
-      "line": 18,
-      "id": "SAST-0007"
-    },
-    {
       "category": "prototype-pollution",
       "cwe": "CWE-1321",
       "description": "Untrusted keys are copied without filtering.",
       "file": "src/dangerous.js",
-      "line": 23,
-      "id": "SAST-0008"
-    },
-    {
-      "category": "insecure-deserialization",
-      "cwe": "CWE-502",
-      "description": "Function constructor executes serialized content.",
-      "file": "src/dangerous.js",
-      "line": 28,
-      "id": "SAST-0009"
+      "line": 24,
+      "id": "SAST-0007"
     },
     {
       "category": "sql-injection",
@@ -80,7 +64,7 @@
       "description": "Untrusted input is concatenated into SQL.",
       "file": "src/data.js",
       "line": 7,
-      "id": "SAST-0010"
+      "id": "SAST-0008"
     },
     {
       "category": "nosql-injection",
@@ -88,7 +72,7 @@
       "description": "Request-controlled filter is passed to the query.",
       "file": "src/data.js",
       "line": 12,
-      "id": "SAST-0011"
+      "id": "SAST-0009"
     },
     {
       "category": "path-traversal",
@@ -96,7 +80,7 @@
       "description": "User supplied filename controls filesystem path.",
       "file": "src/data.js",
       "line": 17,
-      "id": "SAST-0012"
+      "id": "SAST-0010"
     },
     {
       "category": "permissive-cors",
@@ -104,7 +88,7 @@
       "description": "Any origin is allowed with credentials-like access.",
       "file": "src/server.js",
       "line": 15,
-      "id": "SAST-0013"
+      "id": "SAST-0011"
     },
     {
       "category": "reflected-xss",
@@ -112,7 +96,7 @@
       "description": "Query data is written into HTML without encoding.",
       "file": "src/server.js",
       "line": 21,
-      "id": "SAST-0014"
+      "id": "SAST-0012"
     },
     {
       "category": "open-redirect",
@@ -120,7 +104,7 @@
       "description": "Redirect destination comes directly from the request.",
       "file": "src/server.js",
       "line": 26,
-      "id": "SAST-0015"
+      "id": "SAST-0013"
     },
     {
       "category": "code-injection-route",
@@ -128,7 +112,7 @@
       "description": "URL value flows to unsafe dynamic execution.",
       "file": "src/server.js",
       "line": 32,
-      "id": "SAST-0016"
+      "id": "SAST-0014"
     }
   ]
 }
